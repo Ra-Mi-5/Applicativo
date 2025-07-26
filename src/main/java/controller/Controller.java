@@ -59,7 +59,7 @@ public class Controller {
     public ToDo getToDoFromPanel(ToDoPanel panel) {
         ToDo todo = new ToDo();
 
-        todo.setId(panel.getId());  // ⬅️ IMPORTANTE: assegna l'ID reale
+        todo.setId(panel.getId());
 
         todo.setTitolo(panel.getTitolo());
         todo.setDescrizione(panel.getDescrizione());
