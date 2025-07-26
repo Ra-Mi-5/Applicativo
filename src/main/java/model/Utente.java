@@ -1,29 +1,27 @@
 package model;
 
-/**
- * The type Utente.
- */
 public class Utente {
-    private final String login;
+
+    private final String username;
     private String password;
 
-    /**
-     * Instantiates a new Utente.
-     *
-     * @param login    the login
-     * @param password the password
-     */
-    public Utente(String login, String password) {
-        this.login = login;
-        this.password = password;
+    public Utente(String username)
+    {
+        this.username = username;
     }
 
-    /**
-     * Gets login.
-     *
-     * @return the login
-     */
-    public String getLogin() {
-        return login;
+    public String getUsername()
+    {
+        return username;
+    }
+
+    public String getPassword()
+    {
+        return password;
+    }
+
+    public void setPassword(String password)
+    {
+        this.password = password;
     }
 }
