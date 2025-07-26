@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="gui.ToDoListPanel">
+  <grid id="27dc6" binding="mainPanel" layout-manager="BorderLayout" hgap="0" vgap="0">
+    <constraints>
+      <xy x="20" y="20" width="500" height="400"/>
+    </constraints>
+    <properties/>
+    <border type="none"/>
+    <children>
+      <grid id="a5056" layout-manager="BorderLayout" hgap="0" vgap="0">
+        <constraints border-constraint="North"/>
+        <properties>
+          <background color="-1"/>
+          <preferredSize width="0" height="40"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="ad5cf" class="javax.swing.JButton" binding="backButton">
+            <constraints border-constraint="West"/>
+            <properties>
+              <background color="-16734237"/>
+              <maximumSize width="82" height="34"/>
+              <preferredSize width="90" height="34"/>
+              <text value="Indietro"/>
+            </properties>
+          </component>
+          <component id="aaa46" class="javax.swing.JLabel" binding="titoloLabel">
+            <constraints border-constraint="Center"/>
+            <properties>
+              <font size="16" style="1"/>
+              <horizontalAlignment value="0"/>
+              <text value="ToDo Bacheca: &lt;Titolo&gt;"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <scrollpane id="97148">
+        <constraints border-constraint="Center"/>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <grid id="d005f" binding="todoContainerPanel" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+            <constraints/>
+            <properties>
+              <background color="-1"/>
+            </properties>
+            <border type="empty">
+              <size top="10" left="10" bottom="10" right="10"/>
+            </border>
+            <children>
+              <component id="1ee48" class="javax.swing.JLabel" binding="noToDoLabel">
+                <constraints/>
+                <properties>
+                  <font name="Arial Black" size="20" style="2"/>
+                  <foreground color="-3092272"/>
+                  <horizontalAlignment value="0"/>
+                  <horizontalTextPosition value="0"/>
+                  <text value="   Nessun ToDo   "/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+        </children>
+      </scrollpane>
+    </children>
+  </grid>
+</form>

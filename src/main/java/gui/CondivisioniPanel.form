@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="gui.CondivisioniPanel">
+  <grid id="27dc6" binding="mainPanel" layout-manager="GridBagLayout">
+    <constraints>
+      <xy x="26" y="20" width="1281" height="888"/>
+    </constraints>
+    <properties>
+      <background color="-1"/>
+      <minimumSize width="461" height="630"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <component id="b539f" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="5" column="0" row-span="1" col-span="26" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag top="40" left="0" bottom="0" right="0" weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Ink Free" size="18" style="1"/>
+          <minimumSize width="620" height="23"/>
+          <text value="Altri Utenti Disponibili con cui poter Condividere il ToDo"/>
+        </properties>
+      </component>
+      <component id="df55a" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="3" column="0" row-span="1" col-span="21" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag top="0" left="0" bottom="10" right="0" weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Ink Free" size="18" style="1"/>
+          <minimumSize width="500" height="20"/>
+          <preferredSize width="500" height="20"/>
+          <text value="Attualmente questo ToDo è Condiviso con"/>
+        </properties>
+      </component>
+      <scrollpane id="add79" binding="scrollPaneCondivisi">
+        <constraints>
+          <grid row="4" column="3" row-span="1" col-span="10" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <maximumSize width="600" height="200"/>
+          <minimumSize width="600" height="150"/>
+          <preferredSize width="100" height="200"/>
+          <verticalScrollBarPolicy value="22"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="f621d" class="javax.swing.JList" binding="listCondivisi">
+            <constraints/>
+            <properties>
+              <fixedCellHeight value="20"/>
+              <fixedCellWidth value="20"/>
+              <minimumSize width="100" height="100"/>
+              <model/>
+              <preferredSize width="1000" height="300"/>
+              <visibleRowCount value="10"/>
+            </properties>
+          </component>
+        </children>
+      </scrollpane>
+      <scrollpane id="a10e2" binding="scrollPaneDisponibili">
+        <constraints>
+          <grid row="7" column="3" row-span="1" col-span="10" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <maximumSize width="214" height="200"/>
+          <minimumSize width="400" height="170"/>
+          <preferredSize width="400" height="150"/>
+          <verticalScrollBarPolicy value="22"/>
+          <visible value="true"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="7970e" class="javax.swing.JList" binding="listDisponibili">
+            <constraints/>
+            <properties>
+              <fixedCellHeight value="20"/>
+              <fixedCellWidth value="20"/>
+              <minimumSize width="300" height="300"/>
+              <preferredSize width="1000" height="300"/>
+              <visibleRowCount value="10"/>
+            </properties>
+          </component>
+        </children>
+      </scrollpane>
+      <component id="e7d6" class="javax.swing.JTextField" binding="cercaUtente">
+        <constraints>
+          <grid row="6" column="7" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+          <gridbag top="20" left="0" bottom="20" right="0" weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <minimumSize width="200" height="34"/>
+          <preferredSize width="150" height="34"/>
+        </properties>
+      </component>
+      <component id="ff28f" class="javax.swing.JButton" binding="rimuoviSelezionatiButton" default-binding="true">
+        <constraints>
+          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <gridbag top="0" left="0" bottom="0" right="20" weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <background color="-15859457"/>
+          <font size="14"/>
+          <foreground color="-1"/>
+          <minimumSize width="200" height="34"/>
+          <preferredSize width="300" height="34"/>
+          <text value="Rimuovi Selezionati"/>
+        </properties>
+      </component>
+      <component id="88cff" class="javax.swing.JButton" binding="aggiungiSelezionatiButton" default-binding="true">
+        <constraints>
+          <grid row="7" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <gridbag top="0" left="0" bottom="0" right="20" weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <background color="-15859457"/>
+          <focusable value="true"/>
+          <font size="14"/>
+          <foreground color="-1"/>
+          <minimumSize width="200" height="34"/>
+          <text value="Aggiungi Selezionati"/>
+        </properties>
+      </component>
+      <component id="6ae4f" class="javax.swing.JLabel" binding="titoloLabel">
+        <constraints>
+          <grid row="2" column="0" row-span="1" col-span="15" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag top="0" left="0" bottom="20" right="0" weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Century Gothic" size="16" style="1"/>
+          <minimumSize width="900" height="20"/>
+          <text value="Condivisioni per il ToDo: "/>
+        </properties>
+      </component>
+      <component id="5a20" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="0" column="4" row-span="1" col-span="5" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag top="125" left="0" bottom="0" right="0" weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Liberation Mono" size="25" style="1"/>
+          <horizontalAlignment value="0"/>
+          <horizontalTextPosition value="0"/>
+          <text value="      CONDIVISIONI ToDo "/>
+        </properties>
+      </component>
+      <component id="f237f" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="6" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag top="20" left="30" bottom="20" right="0" weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Century Gothic" size="16"/>
+          <text value="Cerca Utente: "/>
+        </properties>
+      </component>
+      <component id="833d3" class="javax.swing.JButton" binding="chiudiButton" default-binding="true">
+        <constraints>
+          <grid row="8" column="8" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <gridbag top="20" left="40" bottom="180" right="40" weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <background color="-15859457"/>
+          <font size="14"/>
+          <foreground color="-1"/>
+          <minimumSize width="90" height="34"/>
+          <preferredSize width="50" height="34"/>
+          <text value="Chiudi"/>
+        </properties>
+      </component>
+      <component id="2f85" class="javax.swing.JLabel" binding="autoreLabel">
+        <constraints>
+          <grid row="1" column="11" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Ink Free" size="20" style="1"/>
+          <text value="Autore:"/>
+        </properties>
+      </component>
+      <component id="90c28" class="javax.swing.JLabel" binding="erroreLabel">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="9" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag top="20" left="50" bottom="20" right="0" weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Century Gothic" size="16" style="1"/>
+          <horizontalAlignment value="2"/>
+          <horizontalTextPosition value="2"/>
+          <maximumSize width="500" height="20"/>
+          <minimumSize width="500" height="20"/>
+          <preferredSize width="500" height="20"/>
+          <text value="Label"/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>

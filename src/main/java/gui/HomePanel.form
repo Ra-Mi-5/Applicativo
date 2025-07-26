@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="gui.HomePanel">
+  <grid id="27dc6" binding="mainPanel" layout-manager="GridLayoutManager" row-count="4" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="0" left="0" bottom="0" right="0"/>
+    <constraints>
+      <xy x="20" y="20" width="1403" height="542"/>
+    </constraints>
+    <properties>
+      <background color="-1"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <toolbar id="c81dd" binding="tool1">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="-1" height="20"/>
+          </grid>
+        </constraints>
+        <properties>
+          <background color="-1"/>
+          <foreground color="-5124406"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="5fcf" class="javax.swing.JButton" binding="InfoUtenteButton">
+            <constraints/>
+            <properties>
+              <background color="-16742145"/>
+              <focusable value="true"/>
+              <font size="14" style="1"/>
+              <foreground color="-1"/>
+              <maximumSize width="1000" height="34"/>
+              <minimumSize width="120" height="50"/>
+              <preferredSize width="110" height="34"/>
+              <text value="Info Utente "/>
+            </properties>
+          </component>
+          <component id="e4700" class="javax.swing.JLabel" binding="logoLabel">
+            <constraints/>
+            <properties>
+              <font name="Cooper Black" size="40" style="1"/>
+              <foreground color="-16734237"/>
+              <horizontalAlignment value="0"/>
+              <horizontalTextPosition value="0"/>
+              <maximumSize width="100000" height="50"/>
+              <minimumSize width="500" height="50"/>
+              <text value="                    ToDo "/>
+            </properties>
+          </component>
+          <hspacer id="97e29">
+            <constraints/>
+          </hspacer>
+          <component id="eb0c4" class="javax.swing.JButton" binding="logOutButton">
+            <constraints/>
+            <properties>
+              <background color="-39601"/>
+              <font size="14" style="1"/>
+              <foreground color="-1"/>
+              <horizontalAlignment value="0"/>
+              <horizontalTextPosition value="0"/>
+              <maximumSize width="1000" height="34"/>
+              <preferredSize width="110" height="34"/>
+              <text value="Logout"/>
+              <verticalAlignment value="0"/>
+            </properties>
+          </component>
+        </children>
+      </toolbar>
+      <grid id="98997" binding="univrsitaPanel" layout-manager="GridLayoutManager" row-count="5" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+            <maximum-size width="350" height="400"/>
+          </grid>
+        </constraints>
+        <properties>
+          <background color="-722691"/>
+          <foreground color="-722691"/>
+        </properties>
+        <border type="etched">
+          <font/>
+          <title-color color="-6112311"/>
+        </border>
+        <children>
+          <component id="bb8f6" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <font name="Consolas" size="28" style="1"/>
+              <foreground color="-14352190"/>
+              <text value="Università"/>
+            </properties>
+          </component>
+          <component id="475b1" class="javax.swing.JButton" binding="modificaDescrizioneButton" default-binding="true">
+            <constraints>
+              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-16734237"/>
+              <font size="14"/>
+              <foreground color="-1"/>
+              <text value="Modifica Descrizione"/>
+            </properties>
+          </component>
+          <component id="c7bf5" class="javax.swing.JLabel" binding="universitaDescrizione">
+            <constraints>
+              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="0" height="30"/>
+                <preferred-size width="250" height="30"/>
+                <maximum-size width="250" height="30"/>
+              </grid>
+            </constraints>
+            <properties>
+              <focusable value="true"/>
+              <font size="14"/>
+              <horizontalAlignment value="0"/>
+              <horizontalTextPosition value="0"/>
+              <text value="Attività Universitarie "/>
+            </properties>
+          </component>
+          <component id="7f388" class="javax.swing.JButton" binding="nuovoToDoButton" default-binding="true">
+            <constraints>
+              <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-16734237"/>
+              <font size="16"/>
+              <foreground color="-1"/>
+              <text value="Aggiungi ToDo +"/>
+            </properties>
+          </component>
+          <component id="ec75f" class="javax.swing.JButton" binding="visualizzaToDoButton" default-binding="true">
+            <constraints>
+              <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <maximum-size width="300" height="150"/>
+              </grid>
+            </constraints>
+            <properties>
+              <background color="-16734237"/>
+              <font size="14"/>
+              <foreground color="-1"/>
+              <text value="Visualizza ToDo"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <grid id="9cc48" layout-manager="GridLayoutManager" row-count="5" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+            <maximum-size width="350" height="400"/>
+          </grid>
+        </constraints>
+        <properties>
+          <background color="-722691"/>
+        </properties>
+        <border type="etched">
+          <font/>
+          <title-color color="-6112311"/>
+        </border>
+        <children>
+          <component id="bd2b0" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <font name="Consolas" size="28" style="1"/>
+              <foreground color="-14352190"/>
+              <text value="Tempo Libero"/>
+            </properties>
+          </component>
+          <component id="a80a0" class="javax.swing.JLabel" binding="descrizioneTempoLibero">
+            <constraints>
+              <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="250" height="30"/>
+                <preferred-size width="250" height="30"/>
+                <maximum-size width="250" height="30"/>
+              </grid>
+            </constraints>
+            <properties>
+              <font size="14"/>
+              <horizontalAlignment value="0"/>
+              <horizontalTextPosition value="0"/>
+              <text value="Tempo Libero, Hobby e Altro"/>
+            </properties>
+          </component>
+          <component id="9c43" class="javax.swing.JButton" binding="modificaDescrizioneButton2" default-binding="true">
+            <constraints>
+              <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-16734237"/>
+              <font size="14"/>
+              <foreground color="-1"/>
+              <text value="Modifica Descrizione"/>
+            </properties>
+          </component>
+          <component id="15796" class="javax.swing.JButton" binding="nuovoToDoButton2" default-binding="true">
+            <constraints>
+              <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-16734237"/>
+              <font size="16"/>
+              <foreground color="-1"/>
+              <text value="Aggiungi ToDo +"/>
+            </properties>
+          </component>
+          <component id="1fbd4" class="javax.swing.JButton" binding="visualizzaToDoButton2" default-binding="true">
+            <constraints>
+              <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-16734237"/>
+              <font size="14"/>
+              <foreground color="-1"/>
+              <text value="Visualizza ToDo"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <grid id="954bb" binding="lavoroPanel" layout-manager="GridLayoutManager" row-count="5" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+            <maximum-size width="350" height="400"/>
+          </grid>
+        </constraints>
+        <properties>
+          <background color="-722691"/>
+        </properties>
+        <border type="etched"/>
+        <children>
+          <component id="91914" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <font name="Consolas" size="28" style="1"/>
+              <foreground color="-14352190"/>
+              <text value="Lavoro"/>
+            </properties>
+          </component>
+          <component id="eb227" class="javax.swing.JButton" binding="modificaDescrizioneButton1" default-binding="true">
+            <constraints>
+              <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-16734237"/>
+              <font size="14"/>
+              <foreground color="-1"/>
+              <text value="Modifica Descrizione"/>
+            </properties>
+          </component>
+          <component id="aec77" class="javax.swing.JLabel" binding="descrizioneLavoro">
+            <constraints>
+              <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="0" height="30"/>
+                <preferred-size width="250" height="30"/>
+                <maximum-size width="250" height="30"/>
+              </grid>
+            </constraints>
+            <properties>
+              <font size="14"/>
+              <horizontalAlignment value="0"/>
+              <horizontalTextPosition value="0"/>
+              <text value="Gestione Attività Lavorative"/>
+            </properties>
+          </component>
+          <component id="151e6" class="javax.swing.JButton" binding="nuovoToDoButton1" default-binding="true">
+            <constraints>
+              <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-16734237"/>
+              <font size="16"/>
+              <foreground color="-1"/>
+              <text value="Aggiungi ToDo +"/>
+            </properties>
+          </component>
+          <component id="4cb8e" class="javax.swing.JButton" binding="visualizzaToDoButton1" default-binding="true">
+            <constraints>
+              <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-16734237"/>
+              <font size="14"/>
+              <foreground color="-1"/>
+              <text value="Visualizza ToDo"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <toolbar id="e1494" binding="tool2">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="-1" height="20"/>
+            <maximum-size width="100000" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <autoscrolls value="false"/>
+          <background color="-1"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="15af7" class="javax.swing.JLabel">
+            <constraints/>
+            <properties>
+              <focusable value="false"/>
+              <font name="Noto Sans Georgian" size="20" style="1"/>
+              <text value="Filtri Ricerca ToDo:"/>
+            </properties>
+          </component>
+          <hspacer id="34dbe">
+            <constraints/>
+          </hspacer>
+          <component id="be986" class="javax.swing.JLabel">
+            <constraints/>
+            <properties>
+              <font name="Consolas" size="18" style="0"/>
+              <maximumSize width="10000" height="40"/>
+              <minimumSize width="100" height="23"/>
+              <text value="&lt;html&gt;Cerca per data scadenza (&lt;b&gt;gg-mm-aaa&lt;/b&gt;)&lt;/html&gt;&#10;"/>
+            </properties>
+          </component>
+          <component id="7780b" class="javax.swing.JTextField" binding="dateField">
+            <constraints/>
+            <properties>
+              <maximumSize width="45000" height="30"/>
+              <preferredSize width="80" height="40"/>
+              <text value=""/>
+            </properties>
+          </component>
+          <hspacer id="aa0a8">
+            <constraints/>
+          </hspacer>
+          <component id="7331d" class="javax.swing.JLabel">
+            <constraints/>
+            <properties>
+              <font name="Consolas" size="19" style="0"/>
+              <horizontalTextPosition value="10"/>
+              <maximumSize width="10000" height="40"/>
+              <minimumSize width="100" height="23"/>
+              <preferredSize width="160" height="20"/>
+              <text value="&lt;html&gt;Cerca per titolo&lt;/html&gt;"/>
+            </properties>
+          </component>
+          <component id="2eea0" class="javax.swing.JTextField" binding="searchField">
+            <constraints/>
+            <properties>
+              <maximumSize width="45000" height="30"/>
+              <preferredSize width="100" height="40"/>
+              <text value=""/>
+            </properties>
+          </component>
+          <hspacer id="dfdc1">
+            <constraints/>
+          </hspacer>
+          <component id="714a5" class="javax.swing.JButton" binding="btnSearch">
+            <constraints/>
+            <properties>
+              <background color="-8004519"/>
+              <font style="1"/>
+              <maximumSize width="1000" height="30"/>
+              <minimumSize width="50" height="40"/>
+              <preferredSize width="100" height="40"/>
+              <text value="Cerca"/>
+            </properties>
+          </component>
+          <hspacer id="f65d6">
+            <constraints/>
+          </hspacer>
+          <component id="f0d38" class="javax.swing.JButton" binding="btnScadenzaOggi">
+            <constraints/>
+            <properties>
+              <background color="-10867"/>
+              <font style="1"/>
+              <maximumSize width="254" height="34"/>
+              <minimumSize width="254" height="40"/>
+              <text value="Visualizza i ToDo in Scadenza Oggi"/>
+            </properties>
+          </component>
+          <hspacer id="424a8">
+            <constraints/>
+          </hspacer>
+        </children>
+      </toolbar>
+      <component id="a9dd" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="Bradley Hand ITC" size="48" style="0"/>
+          <text value="Bacheche"/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>

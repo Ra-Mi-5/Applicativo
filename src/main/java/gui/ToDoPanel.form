@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="gui.ToDoPanel">
+  <grid id="27dc6" binding="mainPanel" layout-manager="GridBagLayout">
+    <constraints>
+      <xy x="20" y="20" width="1898" height="495"/>
+    </constraints>
+    <properties>
+      <alignmentX value="1.0"/>
+      <preferredSize width="1000" height="302"/>
+    </properties>
+    <border type="etched">
+      <font/>
+      <title-color color="-2104859"/>
+    </border>
+    <children>
+      <component id="7b9e4" class="javax.swing.JCheckBox" binding="completatoCheckBox">
+        <constraints>
+          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag top="10" left="100" bottom="25" right="30" weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <background color="-9454770"/>
+          <borderPainted value="true"/>
+          <borderPaintedFlat value="true"/>
+          <contentAreaFilled value="true"/>
+          <font name="Arial" size="16" style="1"/>
+          <foreground color="-1"/>
+          <preferredSize width="108" height="25"/>
+          <selected value="false"/>
+          <text value="Completato"/>
+          <visible value="true"/>
+        </properties>
+      </component>
+      <component id="f669f" class="javax.swing.JButton" binding="modificaButton" default-binding="true">
+        <constraints>
+          <grid row="3" column="5" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <gridbag top="10" left="0" bottom="25" right="10" weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <background color="-16734237"/>
+          <font size="16" style="1"/>
+          <foreground color="-1"/>
+          <text value="Modifica ToDo"/>
+        </properties>
+      </component>
+      <component id="697e1" class="javax.swing.JButton" binding="eliminaButton" default-binding="true">
+        <constraints>
+          <grid row="3" column="7" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <gridbag top="10" left="10" bottom="25" right="10" weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <background color="-33161"/>
+          <font size="16" style="1"/>
+          <foreground color="-1"/>
+          <text value="Elimina ToDo"/>
+        </properties>
+      </component>
+      <component id="8fa3c" class="javax.swing.JComboBox" binding="spostaComboBox">
+        <constraints>
+          <grid row="3" column="9" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+          <gridbag top="10" left="15" bottom="25" right="10" weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <background color="-4803070"/>
+          <font size="16" style="1"/>
+          <foreground color="-1"/>
+          <model>
+            <item value="Sposta"/>
+          </model>
+        </properties>
+      </component>
+      <component id="935f3" class="javax.swing.JButton" binding="giuButton">
+        <constraints>
+          <grid row="2" column="10" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag top="0" left="40" bottom="45" right="65" weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <background color="-4473925"/>
+          <borderPainted value="false"/>
+          <contentAreaFilled value="true"/>
+          <focusable value="true"/>
+          <font style="1"/>
+          <foreground color="-1"/>
+          <label value="Sposta ↓"/>
+          <text value="Sposta ↓"/>
+        </properties>
+      </component>
+      <component id="d74d6" class="javax.swing.JLabel" binding="dataScadenzaLabel">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag top="75" left="60" bottom="50" right="70" weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Arial" size="16" style="1"/>
+          <maximumSize width="250" height="19"/>
+          <minimumSize width="200" height="19"/>
+          <preferredSize width="250" height="19"/>
+          <text value="Scadenza"/>
+          <verticalAlignment value="1"/>
+        </properties>
+      </component>
+      <component id="62c86" class="javax.swing.JLabel" binding="urlLabel">
+        <constraints>
+          <grid row="2" column="0" row-span="1" col-span="6" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag top="10" left="60" bottom="40" right="0" weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Arial" size="16" style="1"/>
+          <maximumSize width="500" height="19"/>
+          <minimumSize width="500" height="19"/>
+          <preferredSize width="500" height="19"/>
+          <text value="URL"/>
+        </properties>
+        <clientProperties>
+          <html.disable class="java.lang.Boolean" value="false"/>
+        </clientProperties>
+      </component>
+      <component id="367ce" class="javax.swing.JTextArea" binding="descrizioneTextArea">
+        <constraints>
+          <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag top="75" left="30" bottom="0" right="0" weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <editable value="false"/>
+          <font name="Arial" size="16" style="1"/>
+          <minimumSize width="200" height="75"/>
+          <preferredSize width="200" height="75"/>
+          <text value="Descrizione"/>
+        </properties>
+      </component>
+      <component id="d0730" class="javax.swing.JLabel" binding="titoloLabel">
+        <constraints>
+          <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <gridbag top="10" left="0" bottom="0" right="0" weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <font name="Century Gothic" size="24" style="1"/>
+          <horizontalAlignment value="0"/>
+          <maximumSize width="123" height="35"/>
+          <minimumSize width="250" height="35"/>
+          <preferredSize width="350" height="35"/>
+          <text value="Titolo ToDo"/>
+        </properties>
+      </component>
+      <component id="82f5a" class="javax.swing.JButton" binding="condivisioniButton" default-binding="true">
+        <constraints>
+          <grid row="3" column="2" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <gridbag top="10" left="0" bottom="25" right="10" weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <background color="-1350677"/>
+          <borderPainted value="true"/>
+          <font size="16" style="1"/>
+          <foreground color="-1"/>
+          <margin top="0" left="0" bottom="0" right="0"/>
+          <text value="Condivisioni ToDo"/>
+        </properties>
+      </component>
+      <component id="c0585" class="javax.swing.JButton" binding="suButton">
+        <constraints>
+          <grid row="1" column="10" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <gridbag top="90" left="40" bottom="0" right="65" weightx="0.0" weighty="0.0"/>
+        </constraints>
+        <properties>
+          <background color="-4473925"/>
+          <font style="1"/>
+          <foreground color="-1"/>
+          <text value="Sposta ↑"/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>
