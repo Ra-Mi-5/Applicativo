@@ -17,7 +17,7 @@ import java.util.List;
 
 public class Controller {
     private final JFrame frame;
-    private HomePanel homePanel; // campo per mantenere istanza
+    private HomePanel homePanel;
 
     private Map<String, Bacheca> bacheche = new HashMap<>();
     private final Map<String, Utente> utentiRegistrati = new HashMap<>();
@@ -41,8 +41,7 @@ public class Controller {
         frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
         frame.setVisible(true);
 
-        // Inizializzazione DAO usando la tua classe DBConnection
-        var conn = DBConnection.getConnection(); // <-- già gestisce eccezioni, se hai fatto bene
+        var conn = DBConnection.getConnection();
 
         utenteDAO = new PostgresUtenteDAO(conn);
         bachecaDAO = new PostgresBachecaDAO(conn);
@@ -51,10 +50,7 @@ public class Controller {
         condivisioneDAO = new PostgresCondivisioneDAO(conn);
 
         inizializzaBachecheDefault();
-
-
     }
-
 
     public ToDo getToDoFromPanel(ToDoPanel panel) {
         ToDo todo = new ToDo();
@@ -111,7 +107,6 @@ public class Controller {
         return true;
     }
 
-
     // Metodo per verificare credenziali
     public boolean verificaCredenziali(String username, String password) {
         Utente utente = utenteDAO.getUtenteByUsername(username);
@@ -124,7 +119,6 @@ public class Controller {
             return false;
         }
     }
-
 
     public void mostraLogin() {
         LoginPanel loginPanel = new LoginPanel(frame, this);
@@ -142,7 +136,7 @@ public class Controller {
 
     public void mostraHome() {
         if (homePanel == null) {
-            homePanel = new HomePanel(frame, this);  // Creo solo la prima volta
+            homePanel = new HomePanel(frame, this);
         }
 
         Container mainPanel = homePanel.getMainPanel();
@@ -158,7 +152,7 @@ public class Controller {
         // Ottieni la lista dei VistaToDo per l'utente e per la bacheca
         List<VistaToDo> vistaToDos = vistaToDoDAO.getByBacheca(usernameCorrente, categoria);
 
-        //  Ordina per posizione (punto 5)
+        //  Ordina per posizione
         vistaToDos.sort(Comparator.comparingInt(VistaToDo::getPosizione));
 
         List<ToDoPanel> pannelliTodo = new ArrayList<>();
@@ -171,10 +165,10 @@ public class Controller {
                     todo.getDataScadenza(),
                     todo.getColore(),
                     todo.getUrl(),
-                    todo.getStato() == StatoToDo.Completato,    // boolean completato
-                    todo.getAutore() != null ? todo.getAutore().getUsername() : null, // autore String
+                    todo.getStato() == StatoToDo.Completato,
+                    todo.getAutore() != null ? todo.getAutore().getUsername() : null,
                     categoria,
-                    tutteLeCategorie,  // Assicurati che questa variabile sia definita qui (List<String>)
+                    tutteLeCategorie,
                     creaListener(categoria),
                     creaSpostamentoListener(categoria)
             );
@@ -196,8 +190,6 @@ public class Controller {
         frame.repaint();
     }
 
-
-
     // Crea un listener per le azioni su ogni ToDo
     public ToDoPanel.ToDoActionListener creaListener(String  categoria) {
         return new ToDoPanel.ToDoActionListener() {
@@ -214,15 +206,12 @@ public class Controller {
                         JOptionPane.YES_NO_OPTION);
 
                 if (conferma == JOptionPane.YES_OPTION) {
-                    ToDo todo = getToDoFromPanel(panel); // ottieni il ToDo con ID valido
-                    eliminaToDo(panel.getCategoria(), todo); // chiami il metodo esistente
+                    ToDo todo = getToDoFromPanel(panel);
+                    eliminaToDo(panel.getCategoria(), todo);
 
-                    mostraToDoList(panel.getCategoria()); // opzionale, ma puoi tenerlo se non incluso in eliminaToDo
+                    mostraToDoList(panel.getCategoria());
                 }
             }
-
-
-
 
             @Override
             public void onSpostaBacheca(ToDoPanel panel, String nuovaCategoria) {
@@ -242,7 +231,7 @@ public class Controller {
                 try {
                     toDoDAO.spostaToDoInBacheca(toDo.getId(), nuovaCategoria, usernameCorrente);
                 } catch (Exception e) {
-                    // gestisci eccezione, ad esempio mostra messaggio o log
+
                     e.printStackTrace();
                 }
 
@@ -266,7 +255,6 @@ public class Controller {
                     // Salvo l'aggiornamento dello stato sul DB
                     toDoDAO.aggiornaStatoToDo(toDo);
                 } catch (Exception ex) {
-                    // Gestione errore, es. mostra messaggio o rollback
                     System.err.println("Errore durante l'aggiornamento dello stato ToDo: " + ex.getMessage());
                 }
             }
@@ -314,8 +302,6 @@ public class Controller {
     }
 
 
-
-
     public void apriEditor(String categoria, ToDoPanel toModificaPanel) {
         ToDoPanel toDoPanelLocale = toModificaPanel;
 
@@ -354,7 +340,7 @@ public class Controller {
 
                 // *** AGGIORNAMENTO DB ***
                 try {
-                    toDoDAO.update(toModifica);  // Assicurati di avere questo metodo nel DAO
+                    toDoDAO.update(toModifica);
                 } catch (SQLException e) {
                     e.printStackTrace();
                     JOptionPane.showMessageDialog(frame, "Errore durante l'aggiornamento del ToDo nel database.", "Errore", JOptionPane.ERROR_MESSAGE);
@@ -414,7 +400,6 @@ public class Controller {
         todoPanel.setCondivisoCon(aggiornati.toArray(new String[0]));
     }
 
-
     public void aggiungiToDo(ToDo todo, String categoria, String username) {
         // Imposta la categoria (titolo della bacheca)
         todo.setCategoria(categoria);
@@ -431,9 +416,8 @@ public class Controller {
         vista.setTodo(todo);
         vista.setUtente(autore);
         vista.setBacheca(new Bacheca(categoria));
-        vista.setPosizione(0); // posizione iniziale, personalizzabile
+        vista.setPosizione(0);
 
-        // Salva la vista nel DB (tabella vista_todo)
         vistaToDoDAO.inserisciVista(vista);
     }
 
@@ -452,7 +436,6 @@ public class Controller {
                 toDoDAO.eliminaToDo(todo.getId());
 
             } catch (SQLException e) {
-                // Gestisci eventuali errori DB
                 e.printStackTrace();
                 throw new RuntimeException("Errore durante l'eliminazione del ToDo dal database", e);
             }
@@ -478,18 +461,15 @@ public class Controller {
     public List<ToDoPanel> cercaToDo(String testo, LocalDate data) {
         List<ToDoPanel> risultati = new ArrayList<>();
 
-        // Chiama la query unificata nel DAO
         List<ToDo> trovati = toDoDAO.cercaToDoAvanzato(usernameCorrente, testo, data);
 
         for (ToDo todo : trovati) {
-            String categoria = todo.getCategoria();  // Assicurati che venga popolata nel mapping
+            String categoria = todo.getCategoria();
             risultati.add(creaToDoPanelFromToDo(todo, categoria));
         }
 
         return risultati;
     }
-
-
 
     /* Metodo helper per creare ToDoPanel da ToDo e categoria.
        Si occupa di costruire un pannello grafico (ToDoPanel) che rappresenta visivamente
@@ -509,7 +489,7 @@ public class Controller {
                 todo.getTitolo(),
                 todo.getDescrizione(),
                 todo.getDataScadenza(),
-                colore,  // usa la variabile colore qui invece di todo.getColore()
+                colore,
                 todo.getUrl(),
                 todo.getStato() == StatoToDo.Completato,
                 todo.getAutore() != null ? todo.getAutore().getUsername() : null,
@@ -519,7 +499,7 @@ public class Controller {
                 creaSpostamentoListener(categoria)
         );
 
-        panel.setId(todo.getId());  // Imposta l'ID prima di restituire
+        panel.setId(todo.getId());
 
         return panel;
     }
@@ -530,7 +510,7 @@ public class Controller {
         LocalDate oggi = LocalDate.now();
         List<ToDoPanel> risultati = new ArrayList<>();
 
-        // Recupera i ToDo scadenza oggi dal DB (assumendo che toDoDAO sia disponibile)
+        // Recupera i ToDo scadenza oggi dal DB
         List<ToDo> todos = toDoDAO.getToDoInScadenzaEntro(username, oggi);
 
         for (ToDo todo : todos) {
@@ -543,10 +523,10 @@ public class Controller {
                     todo.getDataScadenza(),
                     todo.getColore(),
                     todo.getUrl(),
-                    todo.getStato() == StatoToDo.Completato,    // boolean completato
-                    todo.getAutore() != null ? todo.getAutore().getUsername() : null, // autore String
+                    todo.getStato() == StatoToDo.Completato,
+                    todo.getAutore() != null ? todo.getAutore().getUsername() : null,
                     categoria,
-                    tutteLeCategorie,  // Assicurati che questa variabile sia definita qui (List<String>)
+                    tutteLeCategorie,
                     creaListener(categoria),
                     creaSpostamentoListener(categoria)
             );
@@ -563,61 +543,29 @@ public class Controller {
         bachecaDAO.aggiornaDescrizioneBacheca(username, titolo, nuovaDescrizione);
     }
 
-
-
-//    // Restituisce la lista di utenti con cui un ToDo è stato condiviso
-//    public List<String> getUtentiCondivisi(int todoId) {
-//        Set<String> condivisi = condivisioneDAO.getUtentiCondivisi(todoId);  // restituisce un Set
-//        return new ArrayList<>(condivisi);  // converte in List
-//    }
-//
-//    public void rimuoviCondivisioneUtente(int todoId, String usernameDaRimuovere) {
-//        condivisioneDAO.rimuoviCondivisione(todoId, usernameDaRimuovere);
-//    }
-//
-//
-//
-//    // Restituisce gli utenti disponibili per una nuova condivisione
-//    public List<String> getUtentiDisponibili(int todoId, String autore) {
-//        Set<String> condivisi = condivisioneDAO.getUtentiCondivisi(todoId);  // ancora un Set
-//
-//        List<String> tuttiUtentiRegistrati = utenteDAO.getTuttiGliUtenti();  // List
-//
-//        List<String> disponibili = new ArrayList<>();
-//        for (String utente : tuttiUtentiRegistrati) {
-//            if (!utente.equalsIgnoreCase(autore) && !condivisi.contains(utente)) {
-//                disponibili.add(utente);
-//            }
-//        }
-//
-//        return disponibili;
-//    }
-
-
     // Aggiorna la mappa delle condivisioni con i nuovi utenti selezionati
     public void aggiornaCondivisioni(int todoId, Set<String> nuoviUtenti) {
         // Ottieni la lista attuale degli utenti con cui è condiviso il ToDo
         Set<String> utentiAttuali = condivisioneDAO.getUtentiCondivisi(todoId);
 
-        // Calcola differenze
         Set<String> daAggiungere = new HashSet<>(nuoviUtenti);
-        daAggiungere.removeAll(utentiAttuali); // Nuovi utenti da aggiungere
+        daAggiungere.removeAll(utentiAttuali);
 
         Set<String> daRimuovere = new HashSet<>(utentiAttuali);
-        daRimuovere.removeAll(nuoviUtenti); // Utenti da cui rimuovere il ToDo
+        daRimuovere.removeAll(nuoviUtenti);
 
         // Ottieni il ToDo per conoscerne la categoria
         ToDo todo = toDoDAO.getById(todoId);
 
         if (todo == null) {
             System.err.println("ToDo con ID " + todoId + " non trovato!");
-            return; // oppure lancia eccezione se preferisci
+            return;
         }
 
         String bacheca = todo.getCategoria();
         if (bacheca == null) {
             System.err.println("Categoria (bacheca) del ToDo con ID " + todoId + " è null!");
-            return; // oppure gestisci l'errore in altro modo
+            return;
         }
 
         // Aggiungi nuovi utenti
@@ -635,7 +583,7 @@ public class Controller {
         // Rimuovi utenti non più presenti
         for (String utente : daRimuovere) {
             condivisioneDAO.rimuoviCondivisione(todoId, utente);
-            vistaToDoDAO.rimuoviVistaToDo(todoId, utente); // anche dalla vista
+            vistaToDoDAO.rimuoviVistaToDo(todoId, utente);
         }
         // Se l'utente corrente è tra quelli appena aggiunti, aggiorna la sua vista
         if (daAggiungere.contains(usernameCorrente)) {
