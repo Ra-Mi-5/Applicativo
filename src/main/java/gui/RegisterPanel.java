@@ -22,7 +22,7 @@ public class RegisterPanel extends JPanel {
     private final JFrame mainFrame;      // Riferimento al frame principale dell'applicazione
     private final Controller controller; // Controller che gestisce la logica applicativa
 
-    // il Costruttore riceve frame e controller e configura i listener
+    // il Costruttore riceve frame e controller
     public RegisterPanel(JFrame mainFrame, Controller controller) {
         this.mainFrame = mainFrame;
         this.controller = controller;
@@ -66,4 +66,3 @@ public class RegisterPanel extends JPanel {
         return mainPanel;
     }
 }
-

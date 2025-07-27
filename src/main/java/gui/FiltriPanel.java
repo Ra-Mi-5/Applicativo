@@ -27,7 +27,7 @@ public class FiltriPanel extends JPanel {
         // Calcola se il colore di sfondo è scuro o chiaro, per scegliere un colore del testo leggibile
         Color testoNormale = isColoreScuro(sfondo) ? Color.WHITE : Color.BLACK;
 
-        // Gestione della descrizione: se nulla o vuota, mostra testo "nessuna descrizione" in grigio e corsivo
+        // Gestione della descrizione: se nulla o vuota, mostra testo "nessuna descrizione"
         if (descrizione == null || descrizione.isBlank()) {
             descrizioneTextArea.setText("Nessuna descrizione");
             descrizioneTextArea.setFont(descrizioneTextArea.getFont().deriveFont(Font.ITALIC));

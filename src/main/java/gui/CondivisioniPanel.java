@@ -112,7 +112,6 @@ public class CondivisioniPanel {
         listCondivisi.setModel(modelCondivisi);
         listDisponibili.setModel(modelDisponibili);
 
-        // Imposta l’altezza visibile dinamicamente in base agli elementi presenti
         int maxVisibleRows = 10;
         scrollPaneCondivisi.setPreferredSize(new Dimension(scrollPaneCondivisi.getWidth(), listCondivisi.getFixedCellHeight() * Math.min(modelCondivisi.size(), maxVisibleRows) + 5));
         scrollPaneDisponibili.setPreferredSize(new Dimension(scrollPaneDisponibili.getWidth(), listDisponibili.getFixedCellHeight() * Math.min(modelDisponibili.size(), maxVisibleRows) + 5));
@@ -158,7 +157,7 @@ public class CondivisioniPanel {
 
         public CondivisioniDialog(Frame owner, String titolo, String autore, String utenteCorrente,
                                   List<String> condivisi, List<String> disponibili) {
-            super(owner, "Gestione Condivisioni", true); // true = modale
+            super(owner, "Gestione Condivisioni", true);
             panel = new CondivisioniPanel(titolo, autore, utenteCorrente, condivisi, disponibili);
             setContentPane(panel.getMainPanel());
             pack();

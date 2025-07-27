@@ -116,7 +116,6 @@ public class ToDoEditor extends JPanel {
     public void setToDoData(ToDoPanel todo) {
         this.toDoInModifica = todo;
 
-        // Titolo (se "Nessun titolo", pulisce il campo)
         String titolo = todo.getTitolo();
         if ("Nessun titolo".equals(titolo)) {
             titolo = "";
