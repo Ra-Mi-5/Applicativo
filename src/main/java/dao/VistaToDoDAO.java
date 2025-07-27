@@ -1,6 +1,5 @@
 package dao;
 
-import model.TitoloBacheca;
 import model.VistaToDo;
 
 import java.sql.SQLException;
