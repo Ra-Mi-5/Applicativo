@@ -49,7 +49,7 @@ public class PostgresUtenteDAO implements UtenteDAO {
 
     public List<String> getTuttiGliUtenti() {
         List<String> utenti = new ArrayList<>();
-        String sql = "SELECT username FROM utente";  // Assumendo la tabella si chiami 'utenti' e la colonna 'username'
+        String sql = "SELECT username FROM utente";  
 
         try (Connection conn = DBConnection.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql);

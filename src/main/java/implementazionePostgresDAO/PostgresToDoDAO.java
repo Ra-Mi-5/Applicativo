@@ -78,7 +78,7 @@ public class PostgresToDoDAO implements ToDoDAO {
                 conn.rollback(); // In caso di errore, annulla tutto
                 throw new SQLException("Errore durante l'eliminazione del ToDo completo", e);
             } finally {
-                conn.setAutoCommit(true); // Ripristina auto-commit
+                conn.setAutoCommit(true);
             }
         }
     }
@@ -285,7 +285,6 @@ public class PostgresToDoDAO implements ToDoDAO {
     """;
 
         try (Connection conn = DBConnection.getConnection()) {
-            // Disabilita auto-commit per garantire atomicità
             conn.setAutoCommit(false);
 
             try (PreparedStatement stmt1 = conn.prepareStatement(sqlUpdateVista);
@@ -307,7 +306,6 @@ public class PostgresToDoDAO implements ToDoDAO {
                     throw new RuntimeException("Errore: aggiornamento fallito, record non trovato.");
                 }
 
-                // Commit se tutto ok
                 conn.commit();
 
             } catch (SQLException e) {
@@ -353,7 +351,7 @@ public class PostgresToDoDAO implements ToDoDAO {
                     if (categoriaStr != null) {
                         todo.setCategoria(String.valueOf(categoriaStr));
                     } else {
-                        todo.setCategoria(null); // o eventualmente un valore di default
+                        todo.setCategoria(null);
                     }
 
                     return todo;

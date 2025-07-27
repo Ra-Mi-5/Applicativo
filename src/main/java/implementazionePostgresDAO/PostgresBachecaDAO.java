@@ -26,7 +26,7 @@ public class PostgresBachecaDAO implements BachecaDAO {
 
             stmt.setString(1, nuovaDescrizione);
             stmt.setString(2, username);
-            stmt.setString(3, titolo); // deve corrispondere ai valori dell'enum
+            stmt.setString(3, titolo);
 
             stmt.executeUpdate();
         } catch (SQLException e) {
@@ -43,7 +43,7 @@ public class PostgresBachecaDAO implements BachecaDAO {
              PreparedStatement stmt = conn.prepareStatement(sql)) {
 
             stmt.setString(1, username);
-            stmt.setString(2, titolo); // deve essere uno dei valori validi dell'enum
+            stmt.setString(2, titolo);
             stmt.setString(3, descrizione);
 
             stmt.executeUpdate();

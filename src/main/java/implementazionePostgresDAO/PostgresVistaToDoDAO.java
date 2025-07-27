@@ -26,7 +26,7 @@ public class PostgresVistaToDoDAO implements VistaToDoDAO {
 
             stmt.setInt(1, vista.getTodo().getId());
             stmt.setString(2, vista.getUtente().getUsername());
-            stmt.setString(3, vista.getBacheca().getTitolo()); // deve restituire il nome esatto dell'enum
+            stmt.setString(3, vista.getBacheca().getTitolo());
             stmt.setInt(4, vista.getPosizione());
 
             stmt.executeUpdate();
